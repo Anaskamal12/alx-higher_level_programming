@@ -1,23 +1,20 @@
 #!/usr/bin/python3
 """
-my list module
+Module to extend Python's built-in list functionality with additional
 """
 
 
 class MyList(list):
     """
-    Class that inherits the attributes references of class list
-
-    Args:
-        list: class list
-
+    A subclass of the standard Python list with enhanced printing
     """
+
+    def __init__(self):
+        """initializes the object"""
+        super().__init__()
 
     def print_sorted(self):
         """
-        Method that prints the sorted list
+        Prints the elements of the list in a sorted order without altering
         """
-
-        l_sorted = self.copy()
-        l_sorted.sort()
-        print(l_sorted)
+        print(sorted(self))
